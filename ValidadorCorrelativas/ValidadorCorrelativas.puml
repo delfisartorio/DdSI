@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Inscripcion
+class Alumno
+class Materia
+
+
+Alumno --* Inscripcion
+Alumno -->"*" Materia
+Materia -->"*" Materia
+Inscripcion -->"*" Materia
+
+class Alumno {
+-String nombre
+-List<Materia> materiasAprobadas
++ setNombre(String): void
++ getNombre(): String
++ getMateriasAprobadas(): List<Materia>
++ setMateriasAprobadas(List<Materia>): void
++ puedeCursar(Materia): bool
+}
+class Inscripcion {
+-Alumno alumno
+-List<Materia> materiasSolicitadas
++inscripcionAprobada(): bool
++setAlumno(Alumno): void
++setMateriasACursar(List<Materia>): void
++getAlumno(): Alumno
++getMateriasACursar(): List<Materia>
+}
+class Materia {
+-String nombre
+-List<Materia> correlativas
++cumpleCorrelativas(List<Materia>)
++getNombre(): String
++getCorrelativas(): List<Materia>
++setNombre(String): void
++seteCorrelativas(List<Materia>): void
+}
+
+@enduml
