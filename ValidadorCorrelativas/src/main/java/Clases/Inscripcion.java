@@ -5,6 +5,11 @@ import java.util.List;
 public class Inscripcion {
     private Alumno alumno;
 
+    public Inscripcion(Alumno alumno, List<Materia> materiasSolicitadas) {
+        this.alumno = alumno;
+        this.materiasSolicitadas = materiasSolicitadas;
+    }
+
     public void setMateriasSolicitadas(List<Materia> materiasSolicitadas) {
         this.materiasSolicitadas = materiasSolicitadas;
     }

@@ -5,6 +5,11 @@ import java.util.List;
 public class Materia {
     private String nombre;
 
+    public Materia(String nombre, List<Materia> correlativas) {
+        this.nombre = nombre;
+        this.correlativas = correlativas;
+    }
+
     public void setCorrelativas(List<Materia> correlativas) {
         this.correlativas = correlativas;
     }

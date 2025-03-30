@@ -3,6 +3,11 @@ package Clases;
 import java.util.List;
 
 public class Alumno {
+    public Alumno(String nombre, List<Materia> materiasAprobadas) {
+        this.nombre = nombre;
+        this.materiasAprobadas = materiasAprobadas;
+    }
+
     public String getNombre() {
         return nombre;
     }
